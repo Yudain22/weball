@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <!-- type에서 hidden 사용용도는, 사용자에게 보여주기 싫은 정보를 말한다
+      에시)게시판, 해당 게시글의 상세 페이지를 조회 하려면 해당 게시글의 아이디를 서버에게 알려주어야함
+      그때 사용자는 게시판 아이디를 알 필요가 없음
+      서버만 필요한 정보를 전달시 숨겨서 전달함 
+    최소 jsp 이후로 예제를 보게될 예정-->
+      <input type="hidden" name="url" id="url" value="사이트를 통한 직접 로그인">
+      <label>아이디: <input type="text" id="user_id" size="10"></label>
+      <label>비밀번호: <input type="password" id="user_pw" size="10"></label>
+      <input type="submit" value="로그인">
+    </fieldset>
+  </form>
+</body>
+
+</html>
