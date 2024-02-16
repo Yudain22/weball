@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>특정 버튼 이벤트 확인 onclick</h1>
+    <!-- onclick 속성을 이용해서 button을 클릭을 때  
+    ""안에 있는 alert이라는 함수가 동작하게 연결 시켜주는 역할
+    alert 함수는 간단히 무언가 경고를 하는 창을 띄워주는 역할
+    내용은 소괄호 안에 있는 내용: 자바스크립트,문자열을 표기할 때, 
+    양쪽에 작은 따옴표(''), 또는 큰 따옴표로 표기("") -->
+    <input type="button" value="hi" onclick="alert('hi')">
+
+    <!-- 같은 원리로 onclick 기능을 보기 위해서, 배경색을 바꾸는 테스트 수행
+    차이점: 위=alert 함수 사용
+            아래=코드 그대로 작성
+    나중에 코드 내용들을 함수에 담아서 사용하고 
+    함수에 특정 값에 따라 동작하게끔 변경할 예정 -->
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
+
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+
+    <h1>특정 버튼 이벤트 확인 onchange 2</h1>
+    <!-- 계획
+        1. 입력란에 입력된 내용을 가지고 오는 방법 모색
+            예)document.getElementById('blogName')
+            해보니, 값이 아닌 해당 객체를 가지고 옴
+            객체의 이름을 가지고 오고 싶으면 .value 속성을 사용해야함
+            예2)document.getElementById('blogName').value
+        2. 가지고 온 내용을 특정 변수에 담기
+            var 변수를 선언하는 키어드, message, 변수의 이름
+            var message = document.getElementById('change_text_input').value
+        3.버튼을 클릭시 해당 변수를 사용하는 방법 모색
+            함수를 정의-> 함수 사용 -->
+
+            <!-- 연습해보기, 똑같은 방식으로 
+            이메일과 패스워드 입력받는 화면을 만들고, 제출 버튼을 만들고
+            입력된 이메일과 패스워드를 화면에 똑같이 출력해보기
+            1단계: 이메일을 먼저 입력받고, 출력해보기
+            2단계: 따로 패스워드를 입력받고, 따로 출력해보기
+            3단계: 한번에 2개를 다 출력해보기 -->
+
+    <input type="text" onchange="alert('changed')">
+    <br>
+    <input type="text" id="change_text_input">
+    <input type="button" value="변경글자 alert로 띄우기" id="change_text_btn" onclick="printMessage()">
+
+
+    <h1>자바스크립트 동적, HTML 정적</h1>
+    <script>
+        // 간단한 버튼을 하나 추가하고, 버튼에 onclick 이벤트를 적용해서 
+        // 특정 요소의 색깔을 변경하는 것으로 연습하고
+        // 그 안에서 기본적인 클래스, 객체, 조건문, 반복문, 변수 등 
+        // 쉬운 것부터 해보기
+        // 4개 문서에 적용해보기
+
+        document.write(1 + 1);
+        // input에서 입력된 값 가져와서, alert 출력해보기
+        function printMessage() {
+            var message = document.getElementById('change_text_input').value
+            alert(message)
+        }
+
+
+    </script>
+    <h1>1+1</h1>
+</body>
+
+</html>
