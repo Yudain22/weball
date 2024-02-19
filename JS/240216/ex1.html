@@ -44,7 +44,7 @@
         3.버튼을 클릭시 해당 변수를 사용하는 방법 모색
             함수를 정의-> 함수 사용 -->
 
-            <!-- 연습해보기, 똑같은 방식으로 
+    <!-- 연습해보기, 똑같은 방식으로 
             이메일과 패스워드 입력받는 화면을 만들고, 제출 버튼을 만들고
             입력된 이메일과 패스워드를 화면에 똑같이 출력해보기
             1단계: 이메일을 먼저 입력받고, 출력해보기
@@ -55,6 +55,17 @@
     <br>
     <input type="text" id="change_text_input">
     <input type="button" value="변경글자 alert로 띄우기" id="change_text_btn" onclick="printMessage()">
+
+    <h1>이벤트 확인 onkeydown</h1>
+    <!-- 단순 종류 소개일 분 실사용은 이렇게 안 함 -->
+    <!-- 공식 문서에 deprecated 지원을 안 하는 거라서 참고용으로 보기 -->
+    <input type="text" onkeydown="alert('key down')">
+
+    <h1>회원가입 폼</h1>
+    email:<input type="text" id="email">
+    <br>
+    password:<input type="password" id="password">
+    <input type="button" value="제출" id="info" onclick="printUserInfo()">
 
 
     <h1>자바스크립트 동적, HTML 정적</h1>
@@ -72,6 +83,14 @@
             alert(message)
         }
 
+        function printUserInfo() {
+            var email = document.getElementById('email').value
+            var password = document.getElementById('password').value
+            userInfo = "이메일은 " + email + "이고, 비밀번호는 " + password + "입니다."
+            alert(userInfo)
+
+            console.log(userInfo)
+        }
 
     </script>
     <h1>1+1</h1>

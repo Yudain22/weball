@@ -20,15 +20,32 @@
     password:<input type="password" id="password">
     <input type="button" value="제출" id="info" onclick="printUserInfo()">
 
+    <!-- 연습해보기. 
+    간단한 회원가입 폼 
+    1. 이메일 
+    2. 패스워드 
+    3. 확인용 패스워드 
+    4. 이름 
+    5. 전화번호 
+    결과는 alert 경고창에 보여주기.  -->
+
+
+
 
     <script>
         function printUserInfo() {
+            //var 변수를 선언하는 키워드, message, 변수의 이름
             var email = document.getElementById('email').value
             var password = document.getElementById('password').value
+
+            //문자열을 연결하는 연산자"+"
             userInfo = "이메일은 " + email + "이고, 비밀번호는 " + password + "입니다."
             alert(userInfo)
 
+            //콘솔에 출력해보기 실제로 입력된 값이 제대로 들어왔는지 확인용 매우 많이 사용
+            //매우 중요
             console.log(userInfo)
+
         }
 
 
