@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연습</title>
 </head>
+
 <body>
-     <!-- 연습해보기, 똑같은 방식으로 
+    <!-- 연습해보기, 똑같은 방식으로 
             이메일과 패스워드 입력받는 화면을 만들고, 제출 버튼을 만들고
             입력된 이메일과 패스워드를 화면에 똑같이 출력해보기
             1단계: 이메일을 먼저 입력받고, 출력해보기
             2단계: 따로 패스워드를 입력받고, 따로 출력해보기
             3단계: 한번에 2개를 다 출력해보기 -->
-            <input type="text" id="email">
-            <input type="text" id="password" onchange="">
-            <script>
-                function printinfo(){
-                    var message=document.getElementById('')
-                }
+
+    email:<input type="text" id="email">
+    <br>
+    password:<input type="password" id="password">
+    <input type="button" value="제출" id="info" onclick="printUserInfo()">
+
+    <!-- 연습해보기. 
+    간단한 회원가입 폼 
+    1. 이메일 
+    2. 패스워드 
+    3. 확인용 패스워드 
+    4. 이름 
+    5. 전화번호 
+    결과는 alert 경고창에 보여주기.  -->
 
 
-            </script>
+
+
+    <script>
+        function printUserInfo() {
+            //var 변수를 선언하는 키워드, message, 변수의 이름
+            var email = document.getElementById('email').value
+            var password = document.getElementById('password').value
+
+            //문자열을 연결하는 연산자"+"
+            userInfo = "이메일은 " + email + "이고, 비밀번호는 " + password + "입니다."
+            alert(userInfo)
+
+            //콘솔에 출력해보기 실제로 입력된 값이 제대로 들어왔는지 확인용 매우 많이 사용
+            //매우 중요
+            console.log(userInfo)
+
+        }
+
+
+    </script>
 </body>
+
 </html>
